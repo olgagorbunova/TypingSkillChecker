@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<!--
+<Olga Gorbunova
+olgo1700
+olgo1700@student.miun.se
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Typing Skill Inspector</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js"></script>
+  </head>
+  <body>
+    <audio id = "errorSound" preload = "auto">
+      <source src = "audio/key.wav" type = "audio/wav"/>
+      <source src = "audio/key.mp3" type = "audio/mpeg"/>Your browser does not support audio tag
+    </audio>
+    <header>
+      <figure>
+        <img src="img/logo.png" alt="logotype"/>
+        <figcaption><span class = "caps1">T</span>yping <span class = "caps2">S</span>kill <span class = "caps3">I</span>nspector</figcaption>
+      </figure>
+    </header>
+    <main>
+      <form>
+        <div class="form_block">
+          <label for="case_ignore">Ignore casing</label>
+          <input id="case_ignore" type="checkbox"/>
+        </div>
+        <div class="form_block">
+          <label for="text_select">Choose text</label>
+          <select id="text_select">
+            <option value="0">Astrid Lindgren (short)</option>
+            <option value="1">Stieg Larsson (medium)</option>
+            <option value="2">Karin Boye (long)</option>
+          </select>
+        </div>
+      </form>
+      <section id="text_box">
+        <h3 id="text_name"></h3>
+        <h4 id="text_author"></h4>
+        <p id="text"></p>
+      </section>
+      <input id="text_input" type="text" readonly placeholder="Press Play button to start..." size="30" autocomplete="off"/>
+      <button class = "play_btn" id ="game_btn" type="button"></button>
+      <section class="statistics">
+        <table>
+          <tbody>
+            <tr>
+              <td class="stats_label">Gross WPM</td>
+              <td id="gross_wpm">0</td>
+            </tr>
+            <tr>
+              <td class="stats_label">Net WPM</td>
+              <td id="net_wpm">0</td>
+            </tr>
+          </tbody>
+        </table>
+        <table>
+          <tbody>
+            <tr>
+              <td class="stats_label">Accuracy</td>
+              <td id="accuracy">0</td>
+            </tr>
+            <tr>
+              <td class="stats_label">Errors</td>
+              <td id="errors">0</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <footer>
+      <p>Copyright &copy; 2018 Olga Gorbunova. All rights reserved.</p>
+      <address>
+        <a href="mailto:olgo1700@student.miun.se">E-mail me</a>
+      </address>
+    </footer>
+  </body>
+</html>
